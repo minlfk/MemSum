@@ -60,13 +60,13 @@ from huggingface_hub import snapshot_download
 snapshot_download('nianlong/memsum-word-embedding', local_dir = "model/word_embedding" )
 
 ## download model checkpoint on the arXiv dataset
-snapshot_download('nianlong/memsum-arxiv', local_dir = "model/memsum-arxiv" )
+snapshot_download('nianlong/memsum-arxiv-summarization', local_dir = "model/memsum-arxiv" )
 
 ## download model checkpoint on the PubMed dataset
-snapshot_download('nianlong/memsum-pubmed', local_dir = "model/memsum-pubmed" )
+snapshot_download('nianlong/memsum-pubmed-summarization', local_dir = "model/memsum-pubmed" )
 
 ## download model checkpoint on the Gov-Report dataset
-snapshot_download('nianlong/memsum-gov-report', local_dir = "model/memsum-gov-report" )
+snapshot_download('nianlong/memsum-gov-report-summarization', local_dir = "model/memsum-gov-report" )
 ```
 
 ## Testing Pretrained Model on a Given Dataset
