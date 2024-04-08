@@ -253,6 +253,7 @@ The demo on huggingface space is slow because MemSum is running on a small CPU, 
 docker run -it -p 7860:7860 --platform=linux/amd64 \
 	registry.hf.space/nianlong-memsum-arxiv-summarizer:latest 
 ```
+And the open [http://localhost](http://localhost:7860/) in your browser after docker is running:
 ![docker example](images/docker_demo.png)
 
 ### Update 09-02-2023: Released the dataset for human evaluation (comparing MemSum with NeuSum). 
