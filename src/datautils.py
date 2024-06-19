@@ -2,6 +2,7 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 import numpy as np
 import os
+from nltk.tokenize import RegexpTokenizer
 
 from tqdm import tqdm
 
@@ -9,11 +10,17 @@ from tqdm import tqdm
 ## the corpus has been preprocessed, so here only lower is needed
 ## all digits are kept, since sent2vec unigram embedding has digit embedding
 ## no stemming, no lemmatization
+# class SentenceTokenizer:
+#     def __init__(self ):
+#         pass
+#     def tokenize(self, sen ):
+#         return sen.lower()
+
 class SentenceTokenizer:
     def __init__(self ):
-        pass
+        self.word_tok = RegexpTokenizer(r"\w+")
     def tokenize(self, sen ):
-        return sen.lower()
+        return " ".join( self.word_tok.tokenize( sen.lower() ) )
 
 class Vocab:
     def __init__(self, words, eos_token = "<eos>", pad_token = "<pad>", unk_token = "<unk>" ):
